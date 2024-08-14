@@ -88,7 +88,7 @@
             file    = el.querySelector('.file-input').files[0],
             dest    = el.querySelector('.file-dest').value,
             form    = new FormData(),
-            headers = {'X-CSRFToken': getCookie('csrftoken')},
+            headers = {'X-CSRFToken': window.csrfTokenInclude},
             regex  = /jpg|jpeg|png|gif/i
 
         if( ! regex.test(file.type)){
